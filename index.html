@@ -41,26 +41,47 @@
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Recent Updates</h2>
-                <p>
-                  [3-2025] Submitted a paper on Vibcheck to IROS 2025.
-		  [2-2025] Graduated from Columbia!
+         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+	  <tbody>
+	    <tr>
+	      <td style="padding:16px;width:100%;vertical-align:middle">
+	        <h2>Recent Updates</h2>
+	        <p>
+	          [3-2025] Submitted a paper on Vibcheck to IROS 2025.<br>
+	          [2-2025] Graduated from Columbia!
 	        </p>
-		<div id="hidden-updates" style="display:none;">
-                  <p>
-		    [2-2024] Joined ROAM Lab.
-	            [9-2023] Joined Columbia.
-		    [6-2023] Graduated from Xi'an Jiaotong-Liverpool University!
-                  </p>
-		</div>
-		
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+	        
+	        <!-- 隐藏的部分 -->
+	        <div id="hidden-updates" style="display: none;">
+	          <p>
+	            [2-2024] Joined ROAM Lab.<br>
+	            [9-2023] Joined Columbia.<br>
+	            [6-2023] Graduated from Xi'an Jiaotong-Liverpool University!
+	          </p>
+	        </div>
+	
+	        <!-- "More" 按钮 -->
+	        <a href="#" id="toggle-btn" onclick="toggleUpdates()">(+) More ▼</a>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+	<script>
+	function toggleUpdates() {
+	    var updates = document.getElementById("hidden-updates");
+	    var button = document.getElementById("toggle-btn");
+	
+	    if (updates.style.display === "none") {
+	        updates.style.display = "block"; // 显示隐藏内容
+	        button.innerHTML = "(-) Less ▲"; // 更改按钮文本
+	    } else {
+	        updates.style.display = "none"; // 隐藏内容
+	        button.innerHTML = "(+) More ▼"; // 恢复按钮文本
+	    }
+	}
+	</script>
+
 
 
 
