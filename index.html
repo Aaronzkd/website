@@ -204,6 +204,39 @@
     </tr>
 
 
+    <tr onmouseout="balance_stop()" onmouseover="balance_start()">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='balance_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/balance.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/balance.jpg' width="160">
+        </div>
+        <script type="text/javascript">
+          function balance_start() {
+            document.getElementById('balance_image').style.opacity = "1";
+          }
+
+          function balance_stop() {
+            document.getElementById('balance_image').style.opacity = "0";
+          }
+          balance_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://roamlab.github.io/vibecheck/">
+			<span class="papertitle">Design and Implementation of a Self-Balancing Robot based on Inertia Wheel Pendulum Theory
+</span>
+        </a>
+        <br>
+        <em>Final Year Project</em> | Xi’an Jiaotong-Liverpool University | Supervised by <a href="https://scholar.xjtlu.edu.cn/en/persons/YuqingChen">Prof. Yuqing Chen</a>
+        <br>
+        <p>Designed a two-wheeled self-balancing robot based on inertia wheel pendulum theory. Simulated and built a robot from draft to object.</p>
+      </td>
+    </tr>
+
+
 
 
 
