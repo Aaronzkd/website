@@ -41,9 +41,9 @@
               </td>
             </tr>
           </tbody></table>
-         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-	  <tbody>
-	    <tr>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+	    <tbody>
+	      <tr>
 	      <td style="padding:16px;width:100%;vertical-align:middle">
 	        <h2>Recent Updates</h2>
 	        <p>
@@ -64,24 +64,23 @@
 	        <a href="#" id="toggle-btn" onclick="toggleUpdates()">(+) More ▼</a>
 	      </td>
 	    </tr>
-	  </tbody>
-	 </table>
-	 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+	  </tbody></table>
+	  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 	
-	 <script>
-	 function toggleUpdates() {
-	    var updates = document.getElementById("hidden-updates");
-	    var button = document.getElementById("toggle-btn");
+	  <script>
+	  function toggleUpdates() {
+	      var updates = document.getElementById("hidden-updates");
+	      var button = document.getElementById("toggle-btn");
 	
-	    if (updates.style.display === "none") {
-	        updates.style.display = "block"; // 显示隐藏内容
-	        button.innerHTML = "(-) Less ▲"; // 更改按钮文本
-	    } else {
-	        updates.style.display = "none"; // 隐藏内容
-	        button.innerHTML = "(+) More ▼"; // 恢复按钮文本
-	    }
-	 }
-	 </script>
+	      if (updates.style.display === "none") {
+	          updates.style.display = "block"; // 显示隐藏内容
+	          button.innerHTML = "(-) Less ▲"; // 更改按钮文本
+	      } else {
+	          updates.style.display = "none"; // 隐藏内容
+	          button.innerHTML = "(+) More ▼"; // 恢复按钮文本
+	      }
+	   }
+	   </script>
 
 
 
