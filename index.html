@@ -312,13 +312,57 @@
         <br>
         <em>Course Project</em> | <em>Columbia University</em> | <em>Evolutionary Computation and Design Automation</em>
         <br>
-        <p>Designed a soft robot and applied evolutionary computation & genetic algorithm to evolve the locomotion pattern & morphology simultaneously, in order to find the optimal motion dynamics.</p>
+        <p>Designed a soft robot, and applied evolutionary computation and genetic algorithm to evolve the locomotion pattern and morphology simultaneously, in order to find the optimal motion dynamics.</p>
       </td>
 </tr>
 
 
+    <tr onmouseout="snerg_stop()" onmouseover="snerg_start()">
+    <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="media-container">
+            <!-- GIF 图片，默认显示 -->
+            <img id="snerg_gif" src="images/sNeRG.gif" width="160">
+        </div>
 
+        <script type="text/javascript">
+            function snerg_start() {
+                var gif = document.getElementById('snerg_gif');
+                var src = gif.src; // 获取原始 src
+                gif.src = "";  // 先清空 src
+                gif.src = src; // 重新加载 GIF，让它从头播放
+            }
 
+            function snerg_stop() {
+                // GIF 无法真正暂停，除非换成静态图
+                // 这里我们只是保留 GIF，不做额外处理
+            }
+        </script>
+
+        <style>
+            .media-container {
+                position: relative;
+                width: 160px; /* 确保图片大小 */
+                height: 160px;
+            }
+
+            #snerg_gif {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* 确保 GIF 完整填充 */
+            }
+        </style>
+    </td>
+    <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://roamlab.github.io/vibecheck/">
+			<span class="papertitle">Implementation of Depth Supervised Sparse Neural Radiance Grid 
+</span>
+        </a>
+        <br>
+        <em>Course Project</em> | <em>Columbia University</em> | <em>Neural Networks and Deep Learning </em>
+        <br>
+        <p>Proposed a Depth Supervised Sparse Neural Radian Grid (D-sNeRG) method according to sNeRG and Depth NeRF. Improve the scene rendering accuracy while being able to maintain about the same rendering speed as sNeRG</p>
+      </td>
+</tr>
 
 
 
