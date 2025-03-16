@@ -209,23 +209,48 @@
 
     <tr onmouseout="balance_stop()" onmouseover="balance_start()">
       <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='balance_image'><video  width=100% height=100% muted autoplay loop>
+        <div class="media-container">
+         <!-- 视频，默认隐藏 -->
+         <video id="balance_video" width="160" height="160" muted loop>
           <source src="images/balance.mp4" type="video/mp4">
           Your browser does not support the video tag.
-          </video></div>
-          <img src='images/balance.jpg' width="160">
+          </video>
+          <img id="balance_image" src="images/balance.jpg" width="160">
         </div>
         <script type="text/javascript">
-          function balance_start() {
-            document.getElementById('balance_image').style.opacity = "1";
-          }
+            function balance_start() {
+                document.getElementById('balance_video').style.display = "block"; // 显示视频
+                document.getElementById('balance_image').style.display = "none"; // 隐藏图片
+                document.getElementById('balance_video').play(); // 开始播放
+            }
 
-          function balance_stop() {
-            document.getElementById('balance_image').style.opacity = "0";
-          }
+            function balance_stop() {
+                document.getElementById('balance_video').style.display = "none"; // 隐藏视频
+                document.getElementById('balance_image').style.display = "block"; // 显示图片
+                document.getElementById('balance_video').pause(); // 暂停播放
+            }
           balance_stop()
         </script>
+	<style>
+            .media-container {
+                position: relative;
+                width: 160px; /* 确保图片和视频大小一致 */
+                height: 160px;
+            }
+
+            #balance_video, #balance_image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* 确保视频和图片填充整个区域 */
+            }
+
+            #balance_video {
+                display: none; /* 默认隐藏视频 */
+            }
+        </style>
       </td>
       <td style="padding:8px;width:80%;vertical-align:middle">
         <a href="https://roamlab.github.io/vibecheck/">
